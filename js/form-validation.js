@@ -4,6 +4,33 @@ jQuery(document).ready(function($){
 	$("#error").hide();
 	$("#sent-form-msg").hide();
 	
+	
+	
+	// on submit subida imagen...
+	$("#InfoMarcadorForm #submit").click(function() {
+		$("#error").hide();
+		
+		//required:
+		
+		//name
+		var name = $("input#name").val();
+		if(name == ""){
+			$("#error").fadeIn().text("Nombre Requerido.");
+			$("input#name").focus();
+			return false;
+		}
+		
+		
+		// clave
+		var imagen = $("input#imageUpload").val();
+		if(imagen == ""){
+			$("#error").fadeIn().text("No has subido ninguna Imagen");
+			$("input#imageUpload").focus();
+			return false;
+		}
+		
+	}); 
+	
 	// on submit ingreso sistema...
 	$("#loginForm #submit").click(function() {
 		$("#error").hide();

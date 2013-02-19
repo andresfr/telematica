@@ -46,12 +46,11 @@
 			<!-- social-bar -->
 			<div id="social-bar-holder">
 				<ul id="social-bar" class="cf">
-					
-					<li class="dribbble"><a href="http://www.dribbble.com/ansimuz"  title="Dribbble" ></a></li>
-					<li class="facebook"><a href="http://www.facebook.com/pages/Ansimuz/224538697564461"  title="Facebook" ></a></li>
-					<li class="forrst"><a href="http://forrst.me/ansimuz"  title="forrst" ></a></li>
-					<li class="googleplus"><a href="https://plus.google.com/109030791898417339180/posts"  title="googleplus" ></a></li>
-					<li class="twitter"><a href="https://twitter.com/ansimuz"  title="twitter" ></a></li>
+					<li class="dribbble"><a href="#"  title="Dribbble" ></a></li>
+					<li class="facebook"><a href="#"  title="Facebook" ></a></li>
+					<li class="forrst"><a href="#"  title="forrst" ></a></li>
+					<li class="googleplus"><a href="#"  title="googleplus" ></a></li>
+					<li class="twitter"><a href="#"  title="twitter" ></a></li>
 				</ul>
 			</div>
 			<div class="cf"></div>
@@ -59,8 +58,10 @@
 			
 			<div id="logo" class="cf">
 				<a href="index.php" ><img src="img/logo.png" alt="" /></a>
-                <div id="apDiv1"><form id="loginForm" class="loginFormu" action="#" method="post">
+                <div id="apDiv1"><form id="loginForm" class="loginFormu" action="funciones/verificar.php" method="post">
 			    <fieldset>
+				<?php session_start(); if (!isset($_SESSION["usuario"]))
+						{?>
 								<div align="center">
                                 <h5 class="title-divider">Inicio de Sesión</h5>
                                 </div>
@@ -76,6 +77,10 @@
                                     <br />
 								<span id="error" class="warning"></span>
 								<p><input name="submit" type="submit" id="submit" value="Entrar" /> </p>
+				<?php } else { ?>
+						<a href="usuarioreg/index.php?num=1">Volver a mi cuenta</a>
+						<?php }?>
+								
 	    </fieldset>
 							
 			  </form></div>
@@ -114,33 +119,30 @@
 			<!-- featured -->
 			<ul class="feature cf">
 				<li>
-					<a href="single.html" class="thumb" >
-						<img src="img/dummies/t1.jpg" alt="Thumbnail" />
-						<div class="img-overlay"><i class="icon-plus-sign"></i></div>
-						<div class="date"><span class="m">JAN</span><span class="d">09</span></div>
+					<a href="img/dummies/img1.jpg" class="thumb" >
+						<img src="img/dummies/img1.jpg" alt="Thumbnail" />
+						<div class="date"><span class="m"></span>ENE<span class="d">13</span></div>
 					</a>
-					<a href="single.html"  class="excerpt">Pellentesque habitant morbi tristique senectus</a>
-					<div class="categories"><a href="#" >webdesign, </a><a href="#" >print, </a><a href="#" >photo, </a></div>
+					<a href="img/dummies/img1.jpg"  class="excerpt">Mi guitarra lloraba por mi</a>
+					<div class="categories">Me hizo falta luego de mi gira internacional</div>
 				</li>
 				
 				<li>
-					<a href="single.html" class="thumb" >
-						<img src="img/dummies/t2.jpg" alt="Thumbnail" />
-						<div class="img-overlay"><i class="icon-plus-sign"></i></div>
-						<div class="date"><span class="m">JAN</span><span class="d">09</span></div>
+					<a href="img/dummies/img2.jpg" class="thumb" >
+						<img src="img/dummies/img2.jpg" alt="Thumbnail" />
+						<div class="date"><span class="m">ENE</span><span class="d">13</span></div>
 					</a>
-					<a href="single.html"  class="excerpt">Pellentesque habitant morbi tristique senectus</a>
-					<div class="categories"><a href="#" >webdesign, </a><a href="#" >print, </a><a href="#" >photo, </a></div>
+					<a href="img/dummies/img2.jpg"  class="excerpt">Mis Tardes Tristes</a>
+					<div class="categories">La ciudad en epoca de invierno (Parque principal)</div>
 				</li>
 				
 				<li>
-					<a href="single.html" class="thumb" >
-						<img src="img/dummies/t3.jpg" alt="Thumbnail" />
-						<div class="img-overlay"><i class="icon-plus-sign"></i></div>
-						<div class="date"><span class="m">JAN</span><span class="d">09</span></div>
+					<a href="img/dummies/img3.jpg" class="thumb" >
+						<img src="img/dummies/img3.jpg" alt="Thumbnail" />
+						<div class="date"><span class="m">ENE</span><span class="d">13</span></div>
 					</a>
-					<a href="single.html"  class="excerpt">Pellentesque habitant morbi tristique senectus</a>
-					<div class="categories"><a href="#" >webdesign, </a><a href="#" >print, </a><a href="#" >photo, </a></div>
+					<a href="img/dummies/img3.jpg"  class="excerpt">Contrastes</a>
+					<div class="categories">Nuevos implementos de mi cocina :D</div>
 				</li>
 			</ul>
 			<!-- ENDS featured -->

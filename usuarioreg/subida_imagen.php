@@ -36,12 +36,11 @@
 			<!-- social-bar -->
 			<div id="social-bar-holder">
 				<ul id="social-bar" class="cf">
-					
-					<li class="dribbble"><a href="http://www.dribbble.com/ansimuz"  title="Dribbble" ></a></li>
-					<li class="facebook"><a href="http://www.facebook.com/pages/Ansimuz/224538697564461"  title="Facebook" ></a></li>
-					<li class="forrst"><a href="http://forrst.me/ansimuz"  title="forrst" ></a></li>
-					<li class="googleplus"><a href="https://plus.google.com/109030791898417339180/posts"  title="googleplus" ></a></li>
-					<li class="twitter"><a href="https://twitter.com/ansimuz"  title="twitter" ></a></li>
+					<li class="dribbble"><a href="#"  title="Dribbble" ></a></li>
+					<li class="facebook"><a href="#"  title="Facebook" ></a></li>
+					<li class="forrst"><a href="#"  title="forrst" ></a></li>
+					<li class="googleplus"><a href="#"  title="googleplus" ></a></li>
+					<li class="twitter"><a href="#"  title="twitter" ></a></li>
 				</ul>
 			</div>
 			<div class="cf"></div>
@@ -79,12 +78,19 @@
                         <img id="imgIcono" src="../img/dummies/icono_imagen.png" width="500" height="500"/>
                      </div>
                      <div id="sidebar2" >
-						<form id="InfoMarcadorForm" action="funciones/llenado_megatabla.php?id=2" class="loginFormuFile" method="post" enctype="multipart/form-data">
-                        
+						<form id="InfoMarcadorForm" action="funciones/registro_imagen.php"  method="post" enctype="multipart/form-data">  
 							<fieldset>
 								<div>
+								<label>*Nombre de la imagen </label>
+								<input name = "nombreimg" id = "nombreimg" type="text" style="width:350px;" title = "Pon un nombre a la imagen" />
+								</div>
+								<div>
+								<label>*Descripción de la imagen </label>
+								<input name = "descimg" id = "descimg" type="text" style="width:350px;" title = "Pon una descripción a la imagen" />
+								</div>
+								<div>
                                 	<label>*Imagen de tu marcador (Max 5mb)</label>
-									<input name="imageUpload" id="imageUpload" onchange="return ShowImagePreview( this.files );" type="file" class="form-poshytip" title="Busca la imagen de tu marcador" style="width:350px;
+									<input name="imageUpload" id="imageUpload" onChange="return ShowImagePreview( this.files );" type="file" class="form-poshytip" title="Busca la imagen de tu marcador" style="width:350px;
     height:35px;
     background:#efefef;
     border:1px solid #dedede;

@@ -1,14 +1,7 @@
 <?php
-	session_start();
-if (!isset($_SESSION["usuario"]))
-	{
-	include("../notificaciones/errores.php");//incluimos la funcion errores
-	echo mostrar_mensaje_error("Imposible acceder","No ha igresado al Sistema.","","<a href='../index.php'>Ir al inicio</a>");
-	exit();
-}
 //include("funciones/encabezado.php");
 	include("funciones/conexion2.php");
-	$guardar = mysql_query("SELECT cuenta FROM usuario WHERE correo = '".$_SESSION["usuario"]."';"); //creamos la consulta con INSERT INTO para insertar los valores recogidos 
+	$guardar = mysql_query("SELECT cuenta FROM usuario WHERE correo = 'prueba@pru.com';"); //creamos la consulta con INSERT INTO para insertar los valores recogidos 
 	$carpeta = mysql_result($guardar,0);
 	//Consultamos la tabla productos
 $rst=mysql_query("SELECT * FROM imagenes WHERE directorio = '". $carpeta ."';",$conexion);
@@ -68,7 +61,6 @@ $registros = 12;
 			<!-- social-bar -->
 			<div id="social-bar-holder">
 				<ul id="social-bar" class="cf">
-					
 					<li class="dribbble"><a href="#"  title="Dribbble" ></a></li>
 					<li class="facebook"><a href="#"  title="Facebook" ></a></li>
 					<li class="forrst"><a href="#"  title="forrst" ></a></li>
@@ -85,7 +77,7 @@ $registros = 12;
 			
 			<!-- nav -->
 			<nav class="cf">
-				<?php include ("encabezado_inicio.php"); ?>
+				<?php include ("encabezado_iniciosin.php"); ?>
 			</nav>
 			<!-- ends nav -->
 			
@@ -97,7 +89,7 @@ $registros = 12;
 			
 			<!-- featured -->
 			<ul class="work-list cf">
-            <h2 class="heading">&nbsp;&nbsp;Mis Imágenes</h2>
+            <h2 class="heading">&nbsp;&nbsp;Galería</h2>
             <div class="block-divider"></div>
 			<?php
 			if ($numero_reg==0)
@@ -119,7 +111,7 @@ $registros = 12;
 		{
 		?>
 				<li>
-               	<a class="thumb" href="<?php echo $var["url"]; ?>" title="Lista Creadores" ><center><img  src="<?php echo $var["url"]; ?>" title="Lista Creadores" alt="Lista Creadores" ></center><div class="img-overlay"></div></a>
+               	<a class="thumb" href="<?php echo $var["url"]; ?>" title="Lista Creadores" ><center><img  src="<?php echo $var["url"]; ?>" title="Lista Creadores" alt="Lista Creadores" > </center><div class="img-overlay"></div></a>
                    	<a href="<?php echo $var["url"]; ?>"  class="excerpt"><?php echo $var["nombre_imagen"]; ?></a>
 					<div class="categories"><?php echo $var["descripcion"]; ?></div>
                 

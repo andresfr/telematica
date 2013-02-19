@@ -37,12 +37,11 @@
 			<!-- social-bar -->
 			<div id="social-bar-holder">
 				<ul id="social-bar" class="cf">
-					
-					<li class="dribbble"><a href="http://www.dribbble.com/ansimuz"  title="Dribbble" ></a></li>
-					<li class="facebook"><a href="http://www.facebook.com/pages/Ansimuz/224538697564461"  title="Facebook" ></a></li>
-					<li class="forrst"><a href="http://forrst.me/ansimuz"  title="forrst" ></a></li>
-					<li class="googleplus"><a href="https://plus.google.com/109030791898417339180/posts"  title="googleplus" ></a></li>
-					<li class="twitter"><a href="https://twitter.com/ansimuz"  title="twitter" ></a></li>
+					<li class="dribbble"><a href="#"  title="Dribbble" ></a></li>
+					<li class="facebook"><a href="#"  title="Facebook" ></a></li>
+					<li class="forrst"><a href="#"  title="forrst" ></a></li>
+					<li class="googleplus"><a href="#"  title="googleplus" ></a></li>
+					<li class="twitter"><a href="#"  title="twitter" ></a></li>
 				</ul>
 			</div>
 			<div class="cf"></div>
@@ -71,7 +70,7 @@
 	        	<div class="entry-content cf">
 					<h2 class="heading">Formulario de Registro</h2>
 				<!-- form -->
-				<form id="registroForm" action="#" method="post">
+				<form id="registroForm" action="funciones/registro_usuario.php" method="post">
 					<fieldset>
 														
 						<p>
